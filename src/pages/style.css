@@ -21,10 +21,10 @@
 
  #login {
     display: block;
-     width: 600px;
-     height: 60%;
+     width: 450px;
+     height: 450px;
      margin: auto;
-     margin-top: 200px;
+     margin-top: 5%;
      background-color: rgb(9, 9, 9, 0.5);
      background-image: linear-gradient(rgba(0, 0, 0, 0.5),
              rgba(0, 0, 0, 0.5)),
