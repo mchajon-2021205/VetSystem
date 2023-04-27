@@ -9,7 +9,7 @@ import { AuthContext } from '../Index'//Importacion del context
 export const LoginPage = () => {
 
   //Extraer los valores
-  const { loggedIn, setLoggedIn } = useContext(AuthContext);
+  const { loggedIn, setLoggedIn, setDataUser } = useContext(AuthContext);
 
   const navigate = useNavigate();
   const [userLogged, setUserLogge] = useState(false);
@@ -30,9 +30,10 @@ export const LoginPage = () => {
     try {
       const { data } = await axios.post('http://localhost:3000/user/login', log);
       console.log(data)
-      localStorage.setItem('TOKEN', data.token)//Ingresar e; token
       if (data.message) {
         alert(data.message)
+        localStorage.setItem('token', data.token)//Ingresar e; token
+        setDataUser(data.userL)
         setLoggedIn(true)//True para que se loggee
         console.log(loggedIn);
         navigate('/dashboard')
