@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+import React, { useState, useContext, useEffect } from 'react'
 import './DashboardStyle.css'
 import { Animals } from '../Animals'
 import { UserPage } from '../UserPage';
@@ -17,6 +17,7 @@ export const DashboardPaage = () => {
     const [showUser, setShowUser] = useState(false);
     const [showAppointment, setShowAppointment] = useState(false)
     const [showAnimal, setShowAnimal] = useState(false);
+    const [img, setImg] = useState(true)
 
 
     const cambio = (props) => {
@@ -37,6 +38,12 @@ export const DashboardPaage = () => {
         navigate('/')
     }
 
+    const carga = ()=>{
+        setTimeout(()=> setImg(false),2000)
+    }
+
+
+    
 
     return (
         <>

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react'
+  import React, { useState, useContext } from 'react'
 import imagen from '../assets/react.png'
 import './style.css'
 import axios from 'axios'
@@ -33,7 +33,7 @@ export const LoginPage = () => {
       if (data.message) {
         alert(data.message)
         localStorage.setItem('token', data.token)//Ingresar e; token
-        setDataUser(data.userL)
+        setDataUser(data.userLogged)
         setLoggedIn(true)//True para que se loggee
         console.log(loggedIn);
         navigate('/dashboard')

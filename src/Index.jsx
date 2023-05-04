@@ -22,11 +22,11 @@ export const Index = () => {
   const [dataUser, setDataUser] = useState({
     name: '',
     username: '',
-    role: '',
+    role: ''
   })
 
   useEffect(()=>{
-    let token = localStorage.getItem('TOKEN');
+    let token = localStorage.getItem('token');
     if(token) setLoggedIn(true)
   }, [])
 
